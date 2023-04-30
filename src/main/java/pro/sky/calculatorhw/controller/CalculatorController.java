@@ -36,4 +36,8 @@ public class CalculatorController {
 
     }
 
+    @ExceptionHandler({RuntimeException.class})
+        public String exceptionMessage(RuntimeException e){
+            return e.getMessage();
+    }
 }
